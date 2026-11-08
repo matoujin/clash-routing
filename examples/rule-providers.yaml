@@ -1,0 +1,156 @@
+# Merge this fragment into an existing profile; keep local nodes and DNS.
+---
+rule-providers:
+  custom-cursor:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/cursor.yaml
+    path: "./rules/clash-routing/custom-cursor.yaml"
+    interval: 86400
+  custom-grok:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/grok.yaml
+    path: "./rules/clash-routing/custom-grok.yaml"
+    interval: 86400
+  custom-development:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/development.yaml
+    path: "./rules/clash-routing/custom-development.yaml"
+    interval: 86400
+  meta-ai:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/meta-ai.mrs
+    path: "./rules/clash-routing/meta-ai.mrs"
+    interval: 86400
+  meta-github:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/meta-github.mrs
+    path: "./rules/clash-routing/meta-github.mrs"
+    interval: 86400
+  meta-youtube:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/meta-youtube.mrs
+    path: "./rules/clash-routing/meta-youtube.mrs"
+    interval: 86400
+  meta-netflix:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/meta-netflix.mrs
+    path: "./rules/clash-routing/meta-netflix.mrs"
+    interval: 86400
+  meta-spotify:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/meta-spotify.mrs
+    path: "./rules/clash-routing/meta-spotify.mrs"
+    interval: 86400
+  meta-twitch:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/meta-twitch.mrs
+    path: "./rules/clash-routing/meta-twitch.mrs"
+    interval: 86400
+  meta-tiktok:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/meta-tiktok.mrs
+    path: "./rules/clash-routing/meta-tiktok.mrs"
+    interval: 86400
+  meta-telegram:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/meta-telegram.mrs
+    path: "./rules/clash-routing/meta-telegram.mrs"
+    interval: 86400
+  meta-discord:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/meta-discord.mrs
+    path: "./rules/clash-routing/meta-discord.mrs"
+    interval: 86400
+  meta-whatsapp:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/meta-whatsapp.mrs
+    path: "./rules/clash-routing/meta-whatsapp.mrs"
+    interval: 86400
+  meta-slack:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/meta-slack.mrs
+    path: "./rules/clash-routing/meta-slack.mrs"
+    interval: 86400
+  meta-apple:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/meta-apple.mrs
+    path: "./rules/clash-routing/meta-apple.mrs"
+    interval: 86400
+  meta-microsoft:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/meta-microsoft.mrs
+    path: "./rules/clash-routing/meta-microsoft.mrs"
+    interval: 86400
+  meta-google:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/meta-google.mrs
+    path: "./rules/clash-routing/meta-google.mrs"
+    interval: 86400
+  meta-cn:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/meta-cn.mrs
+    path: "./rules/clash-routing/meta-cn.mrs"
+    interval: 86400
+  bm-docker:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/upstream/bm-docker.yaml
+    path: "./rules/clash-routing/bm-docker.yaml"
+    interval: 86400
+rules:
+- RULE-SET,custom-cursor,Cursor 服务
+- RULE-SET,custom-grok,Grok 服务
+- RULE-SET,custom-development,开发工具
+- RULE-SET,meta-ai,AI 服务
+- RULE-SET,meta-github,开发工具
+- RULE-SET,meta-youtube,影音服务
+- RULE-SET,meta-netflix,影音服务
+- RULE-SET,meta-spotify,影音服务
+- RULE-SET,meta-twitch,影音服务
+- RULE-SET,meta-tiktok,影音服务
+- RULE-SET,meta-telegram,通讯服务
+- RULE-SET,meta-discord,通讯服务
+- RULE-SET,meta-whatsapp,通讯服务
+- RULE-SET,meta-slack,通讯服务
+- RULE-SET,meta-apple,Apple 服务
+- RULE-SET,meta-microsoft,Microsoft 服务
+- RULE-SET,meta-google,Google 服务
+- RULE-SET,bm-docker,开发工具
+- RULE-SET,meta-cn,DIRECT

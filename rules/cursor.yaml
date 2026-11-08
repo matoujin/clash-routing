@@ -1,0 +1,9 @@
+# Locally maintained service domains. No shared CDN, telemetry or IP ranges.
+payload:
+  - DOMAIN-SUFFIX,cursor.sh
+  - DOMAIN-SUFFIX,cursor.com
+  - DOMAIN-SUFFIX,cursorapi.com
+  - DOMAIN-SUFFIX,cursor-cdn.com
+  - DOMAIN-SUFFIX,cursorvm.com
+  - DOMAIN-SUFFIX,anysphere.co
+  - DOMAIN-SUFFIX,anysphere.com

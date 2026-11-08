@@ -1,0 +1,30 @@
+name: Update upstream rules
+on:
+  schedule:
+    - cron: '31 3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: update-rules
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/sync_rules.py
+      - name: Commit changed rule files
+        run: |
+          if test -z "$(git status --porcelain -- rules/upstream)"; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add rules/upstream
+          git commit -m 'Update upstream routing rules'
+          git push

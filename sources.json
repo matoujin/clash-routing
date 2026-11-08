@@ -1,0 +1,82 @@
+[
+  {
+    "name": "meta-ai",
+    "path": "rules/upstream/meta-ai.mrs",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs"
+  },
+  {
+    "name": "meta-github",
+    "path": "rules/upstream/meta-github.mrs",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"
+  },
+  {
+    "name": "meta-youtube",
+    "path": "rules/upstream/meta-youtube.mrs",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"
+  },
+  {
+    "name": "meta-netflix",
+    "path": "rules/upstream/meta-netflix.mrs",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"
+  },
+  {
+    "name": "meta-spotify",
+    "path": "rules/upstream/meta-spotify.mrs",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.mrs"
+  },
+  {
+    "name": "meta-twitch",
+    "path": "rules/upstream/meta-twitch.mrs",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitch.mrs"
+  },
+  {
+    "name": "meta-tiktok",
+    "path": "rules/upstream/meta-tiktok.mrs",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"
+  },
+  {
+    "name": "meta-telegram",
+    "path": "rules/upstream/meta-telegram.mrs",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"
+  },
+  {
+    "name": "meta-discord",
+    "path": "rules/upstream/meta-discord.mrs",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/discord.mrs"
+  },
+  {
+    "name": "meta-whatsapp",
+    "path": "rules/upstream/meta-whatsapp.mrs",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/whatsapp.mrs"
+  },
+  {
+    "name": "meta-slack",
+    "path": "rules/upstream/meta-slack.mrs",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/slack.mrs"
+  },
+  {
+    "name": "meta-apple",
+    "path": "rules/upstream/meta-apple.mrs",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs"
+  },
+  {
+    "name": "meta-microsoft",
+    "path": "rules/upstream/meta-microsoft.mrs",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"
+  },
+  {
+    "name": "meta-google",
+    "path": "rules/upstream/meta-google.mrs",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"
+  },
+  {
+    "name": "meta-cn",
+    "path": "rules/upstream/meta-cn.mrs",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"
+  },
+  {
+    "name": "bm-docker",
+    "path": "rules/upstream/bm-docker.yaml",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Docker/Docker.yaml"
+  }
+]
