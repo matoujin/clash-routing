@@ -1,3 +1,4 @@
+# 这些域名由引用本文件的 RULE-SET 送入对应策略组。手机蜂窝建议走「AI 稳定出口」，不要默认 DIRECT。
 payload:
   - DOMAIN-SUFFIX,grok.com
   - DOMAIN-SUFFIX,x.ai

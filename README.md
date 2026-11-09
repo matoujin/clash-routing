@@ -12,6 +12,14 @@ https://raw.githubusercontent.com/matoujin/clash-routing/main/examples/rule-prov
 
 这个文件是配置片段，包含 `rule-providers` 和 `rules`，不是包含节点的完整机场订阅。将所需条目合并到自己的配置，策略组名称改为设备上实际使用的名称。已使用本次电脑分组命名的配置可直接复用示例中的目标名称。
 
+示例里 `custom-grok` 指向「AI 稳定出口」。手机蜂窝不要把 Grok / x.ai 默认走 DIRECT。`api.x.ai` 已包含在 `rules/grok.yaml` 的 `DOMAIN-SUFFIX,x.ai` 里。
+
+若配置里仍有名为「Grok 服务」的策略组，推荐顺序见：
+
+https://raw.githubusercontent.com/matoujin/clash-routing/main/examples/proxy-groups-grok.yaml
+
+「AI 稳定出口」在前，「海外服务」其次，DIRECT 只留在最后作手动备用。
+
 自维护规则地址：
 
 - Cursor：https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/cursor.yaml
@@ -30,7 +38,7 @@ https://raw.githubusercontent.com/matoujin/clash-routing/main/examples/rule-prov
 
 GitHub Actions 每天检查上游，有内容变化时提交到 `main`；也可手动运行工作流。设备按 `interval: 86400` 每 24 小时检查一次规则更新。首次需要下载，后续沿用客户端的本地缓存。仓库工作流和设备刷新是两个独立步骤，更新并非实时推送。
 
-自维护规则修改发布后，电脑和手机在下一次规则更新时获取。GitHub 仓库本身不会修改设备上的策略组、DNS、节点或客户端。
+自维护规则修改发布后，电脑和手机在下一次规则更新时获取。GitHub 仓库本身不会修改设备上的策略组、DNS、节点或客户端。只刷新 rule-providers 不会改写已经导入的完整配置里的策略组顺序。手机上的「Grok 服务」如果仍把 DIRECT 放在最前，需要重新导入配置，或在客户端里手动改成先走「AI 稳定出口」。
 
 ## 分类和优先级
 

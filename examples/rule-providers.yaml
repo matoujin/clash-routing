@@ -136,7 +136,7 @@ rule-providers:
     interval: 86400
 rules:
 - RULE-SET,custom-cursor,Cursor 服务
-- RULE-SET,custom-grok,Grok 服务
+- RULE-SET,custom-grok,AI 稳定出口
 - RULE-SET,custom-development,开发工具
 - RULE-SET,meta-ai,AI 服务
 - RULE-SET,meta-github,开发工具

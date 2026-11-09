@@ -1,0 +1,8 @@
+# 仍使用名为「Grok 服务」的策略组时合并本片段。DIRECT 只放在最后，作手动备用。
+proxy-groups:
+  - name: Grok 服务
+    type: select
+    proxies:
+      - AI 稳定出口
+      - 海外服务
+      - DIRECT
