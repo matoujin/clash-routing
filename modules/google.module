@@ -1,0 +1,16 @@
+#!name=Google 走代理
+#!desc=Google、Gemini、Antigravity 走当前配置里的「谷歌服务」。加在模块里，不要替换原始配置。
+
+[Rule]
+DOMAIN-KEYWORD,antigravity,谷歌服务
+DOMAIN-KEYWORD,google,谷歌服务
+DOMAIN-SUFFIX,gstatic.com,谷歌服务
+DOMAIN-SUFFIX,gstatic.cn,谷歌服务
+DOMAIN-SUFFIX,ggpht.com,谷歌服务
+DOMAIN-SUFFIX,gmail.com,谷歌服务
+DOMAIN-SUFFIX,recaptcha.net,谷歌服务
+DOMAIN-SUFFIX,1e100.net,谷歌服务
+DOMAIN-SUFFIX,gvt1.com,谷歌服务
+DOMAIN-SUFFIX,gvt2.com,谷歌服务
+DOMAIN-SUFFIX,gvt3.com,谷歌服务
+DOMAIN-SUFFIX,google.dev,谷歌服务

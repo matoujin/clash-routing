@@ -27,6 +27,10 @@ https://raw.githubusercontent.com/matoujin/clash-routing/main/examples/proxy-gro
 - 开发工具：https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/development.yaml
 - Google / Antigravity：https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/google.yaml
 
+手机上的 Clash 不要把规则文件填进「添加配置」。那一栏会换成一整份配置。规则叠在现有节点上，用模块链接：
+
+https://raw.githubusercontent.com/matoujin/clash-routing/main/modules/google.module
+
 `custom-google` 指向「Google 服务」，并且排在 `meta-ai` 与国内域名之前，避免 Gemini、Antigravity 被 AI 分类或国内规则抢走。YouTube 的 `meta-youtube` 排在它前面，视频域名仍走影音。策略组不要把 DIRECT 放在前面，示例见：
 
 https://raw.githubusercontent.com/matoujin/clash-routing/main/examples/proxy-groups-google.yaml
