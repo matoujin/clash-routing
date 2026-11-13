@@ -1,0 +1,15 @@
+# Google 与 Antigravity。不含 YouTube CDN，避免抢走影音规则。
+# 引用时把本 RULE-SET 放在 meta-ai 和国内域名之前。
+payload:
+  - DOMAIN-KEYWORD,antigravity
+  - DOMAIN-KEYWORD,google
+  - DOMAIN-SUFFIX,gstatic.com
+  - DOMAIN-SUFFIX,gstatic.cn
+  - DOMAIN-SUFFIX,ggpht.com
+  - DOMAIN-SUFFIX,gmail.com
+  - DOMAIN-SUFFIX,recaptcha.net
+  - DOMAIN-SUFFIX,1e100.net
+  - DOMAIN-SUFFIX,gvt1.com
+  - DOMAIN-SUFFIX,gvt2.com
+  - DOMAIN-SUFFIX,gvt3.com
+  - DOMAIN-SUFFIX,google.dev

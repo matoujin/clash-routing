@@ -22,6 +22,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/development.yaml
     path: "./rules/clash-routing/custom-development.yaml"
     interval: 86400
+  custom-google:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/google.yaml
+    path: "./rules/clash-routing/custom-google.yaml"
+    interval: 86400
   meta-ai:
     type: http
     behavior: domain
@@ -138,9 +145,10 @@ rules:
 - RULE-SET,custom-cursor,Cursor 服务
 - RULE-SET,custom-grok,AI 稳定出口
 - RULE-SET,custom-development,开发工具
+- RULE-SET,meta-youtube,影音服务
+- RULE-SET,custom-google,Google 服务
 - RULE-SET,meta-ai,AI 服务
 - RULE-SET,meta-github,开发工具
-- RULE-SET,meta-youtube,影音服务
 - RULE-SET,meta-netflix,影音服务
 - RULE-SET,meta-spotify,影音服务
 - RULE-SET,meta-twitch,影音服务

@@ -25,6 +25,11 @@ https://raw.githubusercontent.com/matoujin/clash-routing/main/examples/proxy-gro
 - Cursor：https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/cursor.yaml
 - Grok：https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/grok.yaml
 - 开发工具：https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/development.yaml
+- Google / Antigravity：https://raw.githubusercontent.com/matoujin/clash-routing/main/rules/google.yaml
+
+`custom-google` 指向「Google 服务」，并且排在 `meta-ai` 与国内域名之前，避免 Gemini、Antigravity 被 AI 分类或国内规则抢走。YouTube 的 `meta-youtube` 排在它前面，视频域名仍走影音。策略组不要把 DIRECT 放在前面，示例见：
+
+https://raw.githubusercontent.com/matoujin/clash-routing/main/examples/proxy-groups-google.yaml
 
 通用分类位于 `rules/upstream/`，例如：
 
@@ -44,7 +49,7 @@ GitHub Actions 每天检查上游，有内容变化时提交到 `main`；也可�
 
 提供 AI、Google、GitHub、Apple、Microsoft、YouTube、Netflix、Spotify、Twitch、TikTok、Telegram、Discord、WhatsApp、Slack、Docker 和国内域名分类。
 
-建议顺序：本地/公司例外 → Cursor/Grok 等自定义规则 → AI、通讯、影音等具体分类 → Google/Apple/Microsoft 等大分类 → 国内域名 → 最终兜底。已有的 IP 规则与兜底规则由设备自行保留。只加入实际需要的分类，避免多来源重复覆盖。
+建议顺序：本地/公司例外 → Cursor/Grok 等自定义规则 → YouTube → `custom-google` → AI、通讯等具体分类 → Apple/Microsoft 等大分类 → 国内域名 → 最终兜底。`custom-google` 必须在 `meta-ai` 和国内域名之前。已有的 IP 规则与兜底规则由设备自行保留。只加入实际需要的分类，避免多来源重复覆盖。
 
 MRS 域名规则不包含所有 IP 直连流量；应用的 UDP、系统代理接管、账号地区限制也不由域名规则本身解决。
 
@@ -52,6 +57,6 @@ MRS 域名规则不包含所有 IP 直连流量；应用的 UDP、系统代理�
 
 - [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat)：通用域名分类，MRS 格式。
 - [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)：Docker 补充规则，保留原作者注释。
-- `rules/cursor.yaml`、`rules/grok.yaml`、`rules/development.yaml`：本仓库维护的精确域名列表。
+- `rules/cursor.yaml`、`rules/grok.yaml`、`rules/development.yaml`、`rules/google.yaml`：本仓库维护的精确域名列表。
 
 上游文件保留原内容，来源地址登记在 `sources.json`，权利与使用条件以原项目为准。

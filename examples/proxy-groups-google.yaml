@@ -1,0 +1,6 @@
+# 仍使用名为「Google 服务」的策略组时合并本片段。不要把 DIRECT 放在前面。
+proxy-groups:
+  - name: Google 服务
+    type: select
+    proxies:
+      - 海外服务
